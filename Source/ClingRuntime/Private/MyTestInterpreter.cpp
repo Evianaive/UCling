@@ -5,7 +5,7 @@
 
 #include "cling-demo.h"
 #include "TestStatic.h"
-#include "UCling.h"
+#include "ClingRuntime.h"
 #include "cling/Interpreter/Interpreter.h"
 
 
@@ -33,7 +33,7 @@ void AMyTestInterpreter::Process()
 {
 	// TBaseStructure<FVector>::Get();
 	SCOPED_NAMED_EVENT(Cling_EXEC, FColor::Red);
-	auto& Module = FModuleManager::Get().GetModuleChecked<FUClingModule>(TEXT("UCling"));
+	auto& Module = FModuleManager::Get().GetModuleChecked<FClingRuntimeModule>(TEXT("ClingRuntime"));
 	::Execute(Module.Interp,StringCast<ANSICHAR>(*ProcessString).Get());
 }
 

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
 using UnrealBuildTool;
 
-public class UClingLibrary : ModuleRules
+public class ClingLibrary : ModuleRules
 {
-	public UClingLibrary(ReadOnlyTargetRules Target) : base(Target)
+	public ClingLibrary(ReadOnlyTargetRules Target) : base(Target)
 	{
 		Type = ModuleType.External;
 		// PublicSystemIncludePaths.Add("$(ModuleDir)/Public/");
@@ -128,11 +128,11 @@ public class UClingLibrary : ModuleRules
 		// else if (Target.Platform == UnrealTargetPlatform.Mac)
 		// {
 		// 	PublicDelayLoadDLLs.Add(Path.Combine(ModuleDirectory, "Mac", "Release", "libExampleLibrary.dylib"));
-		// 	RuntimeDependencies.Add("$(PluginDir)/Source/ThirdParty/UClingLibrary/Mac/Release/libExampleLibrary.dylib");
+		// 	RuntimeDependencies.Add("$(PluginDir)/Source/ThirdParty/ClingLibrary/Mac/Release/libExampleLibrary.dylib");
 		// }
 		// else if (Target.Platform == UnrealTargetPlatform.Linux)
 		// {
-		// 	string ExampleSoPath = Path.Combine("$(PluginDir)", "Binaries", "ThirdParty", "UClingLibrary", "Linux", "x86_64-unknown-linux-gnu", "libExampleLibrary.so");
+		// 	string ExampleSoPath = Path.Combine("$(PluginDir)", "Binaries", "ThirdParty", "ClingLibrary", "Linux", "x86_64-unknown-linux-gnu", "libExampleLibrary.so");
 		// 	PublicAdditionalLibraries.Add(ExampleSoPath);
 		// 	PublicDelayLoadDLLs.Add(ExampleSoPath);
 		// 	RuntimeDependencies.Add(ExampleSoPath);

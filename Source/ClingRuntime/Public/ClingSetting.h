@@ -35,7 +35,7 @@ struct FModuleCompileInfo
 	UPROPERTY(VisibleAnywhere)
 	FName PCHUsage;
 	UPROPERTY(VisibleAnywhere)
-	bool ChainSharedPCH;
+	bool ChainSharedPCH{0};
 	UPROPERTY(VisibleAnywhere)
 	TArray<FString> PublicDependencyModules;
 	UPROPERTY(VisibleAnywhere)
@@ -75,7 +75,7 @@ struct FModuleCompileInfo
 };
 
 UCLASS(Config=Cling)
-class UCLING_API UClingSetting : public UDeveloperSettings
+class CLINGRUNTIME_API UClingSetting : public UDeveloperSettings
 {
 	GENERATED_BODY()
 public:

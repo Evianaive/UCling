@@ -11,7 +11,7 @@
  * 
  */
 UCLASS()
-class UCLING_API UClingBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+class CLINGRUNTIME_API UClingBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

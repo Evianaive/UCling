@@ -9,7 +9,7 @@ namespace cling
 	class Interpreter;
 }
 
-class FUClingModule : public IModuleInterface
+class FClingRuntimeModule : public IModuleInterface
 {
 public:
 

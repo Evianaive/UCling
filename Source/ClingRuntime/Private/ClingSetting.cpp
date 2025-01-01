@@ -4,7 +4,7 @@
 #include "ClingSetting.h"
 
 #include "JsonObjectConverter.h"
-#include "UCling.h"
+#include "ClingRuntime.h"
 #include "Interfaces/IPluginManager.h"
 
 UClingSetting::UClingSetting()
@@ -38,7 +38,7 @@ void UClingSetting::RefreshIncludePaths()
 template<typename T>
 void GetFileContent(const FString& FileName, T& Result)
 {
-	FString ModuleBuildInfoJson = IPluginManager::Get().FindPlugin("UCling")->GetBaseDir()/FileName;
+	FString ModuleBuildInfoJson = IPluginManager::Get().FindPlugin("UECling")->GetBaseDir()/FileName;
 	if constexpr (TIsTArray<typename TDecay<T>::Type>::Value)
 	{
 		FFileHelper::LoadFileToStringArray(Result,*ModuleBuildInfoJson);
@@ -51,7 +51,7 @@ void GetFileContent(const FString& FileName, T& Result)
 
 void UClingSetting::RefreshModuleIncludePaths()
 {
-	// auto& Module = FModuleManager::Get().GetModuleChecked<FUClingModule>(TEXT("UCling"));
+	// auto& Module = FModuleManager::Get().GetModuleChecked<FClingRuntimeModule>(TEXT("ClingRuntime"));
 	FString JsonString;
 	::GetFileContent(TEXT("ModuleBuildInfos.json"),JsonString);
 	// Parse the JSON string

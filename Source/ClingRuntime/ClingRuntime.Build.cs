@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnrealBuildBase;
 
-public class UCling : ModuleRules
+public class ClingRuntime : ModuleRules
 {
-	public UCling(ReadOnlyTargetRules Target) : base(Target)
+	public ClingRuntime(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 	
@@ -46,7 +46,7 @@ public class UCling : ModuleRules
 			new string[]
 			{
 				"Core",
-				"UClingLibrary",
+				"ClingLibrary",
 				"Projects",
 				"Engine",
 				"CoreUObject"

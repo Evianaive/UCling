@@ -7,7 +7,7 @@
 #include "MyTestInterpreter.generated.h"
 
 UCLASS()
-class UCLING_API AMyTestInterpreter : public AActor
+class CLINGRUNTIME_API AMyTestInterpreter : public AActor
 {
 	GENERATED_BODY()
 
